@@ -3,6 +3,7 @@ import _ from 'lodash'
 import {useCatalystStore} from "./catalyst.js";
 import {toRaw} from "vue";
 
+
 export const useFilterStore = defineStore({
     id: "filterStore",
     state: () => ({
@@ -14,6 +15,8 @@ export const useFilterStore = defineStore({
         firstLocation: null,
         secondLocation: null,
         thirdLocation: null,
+
+        selectedZodiac: null,
 
 
     }),

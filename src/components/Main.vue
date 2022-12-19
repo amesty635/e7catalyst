@@ -21,7 +21,7 @@ const filterStore = useFilterStore()
   </n-layout>
   <n-layout has-sider>
     <n-layout-sider content-style="padding: 24px;">
-      First Catalyst - {{filterStore.firstCatalyst}}
+      {{catalystStore.getFirstCatalystName}}
     </n-layout-sider>
     <n-layout-content content-style="padding: 24px;">
       {{filterStore.firstLocation}}
@@ -29,7 +29,7 @@ const filterStore = useFilterStore()
   </n-layout>
   <n-layout has-sider>
     <n-layout-sider content-style="padding: 24px;">
-      Second Catalyst - {{filterStore.secondCatalyst}}
+      {{catalystStore.getSecondCatalystName}}
     </n-layout-sider>
     <n-layout-content content-style="padding: 24px;">
       {{ filterStore.secondLocation }}
@@ -37,7 +37,7 @@ const filterStore = useFilterStore()
   </n-layout>
   <n-layout has-sider>
     <n-layout-sider content-style="padding: 24px;">
-      Third Catalyst - {{filterStore.thirdCatalyst}}
+      {{catalystStore.getThirdCatalystName}}
     </n-layout-sider>
     <n-layout-content content-style="padding: 24px;">
       {{ filterStore.thirdLocation }}
