@@ -22,26 +22,40 @@ export const useFilterStore = defineStore({
     }),
 
     getters: {
-        getOptimal: (state) => {
+        getOptimal(state) {
             if (!state.thirdLocation) {
-                let intersectOfTwo = _.intersection(state.firstLocation, state.secondLocation)
-                if (_.isEmpty(intersectOfTwo)) {
+                let firstLocation = _.split(state.firstLocation, ',')
+                let secondLocation = _.split(state.secondLocation, ',')
+                let intersectOfTwo = _.intersectionWith(firstLocation, secondLocation, _.isEqual)
+
+                if (_.isEmpty(intersectOfTwo) || intersectOfTwo == "") {
                     return ('No optimal place to farm, farm separately')
                 } else {
-                    return intersectOfTwo
+                    return _.toString(intersectOfTwo)
                 }
             } else {
-                let intersectOfTwo = _.intersection(state.firstLocation, state.secondLocation)
-                let intersectOfThree = _.intersection(intersectOfTwo, state.thirdLocation)
-                if (_.isEmpty(intersectOfThree)) {
-                    return intersectOfTwo
+                let firstLocation = _.split(state.firstLocation, ',')
+                let secondLocation = _.split(state.secondLocation, ',')
+                let thirdLocation = _.split(state.thirdLocation, ',')
+                let intersectOfTwo = _.intersection(firstLocation, secondLocation)
+                if (_.isEmpty(intersectOfTwo)) {
+                    intersectOfTwo = _.concat(firstLocation, secondLocation)
+                    let intersectOfThree = _.intersection(intersectOfTwo, thirdLocation)
+                    if (_.isEmpty(intersectOfThree)) {
+                        return ('No optimal place to farm, farm separately')
+                    } else {
+                        return _.toString(intersectOfThree)
+                    }
                 } else {
-                    return intersectOfThree
+                    let intersectOfThree = _.intersection(intersectOfTwo, thirdLocation)
+                    if (_.isEmpty(intersectOfThree)) {
+                        return ('No optimal place to farm, farm separately')
+                    } else {
+                        return _.toString(intersectOfThree)
+                    }
                 }
             }
-        },
-
-
+        }
     },
 
     actions: {
@@ -65,7 +79,6 @@ export const useFilterStore = defineStore({
 
 
     },
-
 
 
 })

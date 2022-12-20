@@ -1,7 +1,7 @@
 <script setup>
 import Main from './components/Main.vue'
 import Filter from './components/Filter.vue'
-import {NLayoutSider, NLayoutContent, NSpace, NLayout, NConfigProvider, NLayoutHeader} from 'naive-ui'
+import {NLayoutSider, NLayoutContent, NSpace, NLayout, NConfigProvider} from 'naive-ui'
 import { darkTheme } from 'naive-ui'
 
 </script>

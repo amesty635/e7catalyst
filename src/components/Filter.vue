@@ -104,6 +104,7 @@ function handleClear() {
       >
       </n-select>
       <n-select
+          :disabled="!selectedValue0"
           clearable
           style="margin-top: 20px"
           filterable
@@ -116,6 +117,7 @@ function handleClear() {
       >
       </n-select>
       <n-select
+          :disabled="!selectedValue1"
           clearable
           style="margin-top: 20px"
           filterable
