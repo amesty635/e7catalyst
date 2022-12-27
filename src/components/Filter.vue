@@ -26,18 +26,28 @@ const selectedHero = ref(null)
 
 //Filter update
 function setCatalystFilter0() {
+  filterStore.firstLocation = null
   filterStore.$patch({firstCatalyst: selectedValue0})
+  filterStore.searchLocations()
 }
 
 function setCatalystFilter1() {
+  filterStore.secondLocation = null
   filterStore.$patch({secondCatalyst: selectedValue1})
+  filterStore.searchLocations()
 }
 
 function setCatalystFilter2() {
+  filterStore.thirdLocation = null
   filterStore.$patch({thirdCatalyst: selectedValue2})
+  filterStore.searchLocations()
 }
 
 function setHeroFilter() {
+
+  filterStore.firstLocation = null
+  filterStore.secondLocation = null
+  filterStore.thirdLocation = null
 
   let zodiac = (_.find(heroes, {"id": this.selectedHero}).zodiac)
   filterStore.$patch({selectedZodiac: zodiac})
@@ -51,6 +61,8 @@ function setHeroFilter() {
   selectedValue0.value = filterStore.firstCatalyst
   selectedValue1.value = filterStore.secondCatalyst
   selectedValue2.value = filterStore.thirdCatalyst
+
+  filterStore.searchLocations()
 
 }
 
@@ -92,7 +104,6 @@ function handleClear() {
       <h2>or choose catalysts</h2>
       <n-divider/>
       <n-select
-          clearable
           style="margin-top: 10px"
           filterable
           placeholder="Please select a catalyst"
@@ -105,7 +116,6 @@ function handleClear() {
       </n-select>
       <n-select
           :disabled="!selectedValue0"
-          clearable
           style="margin-top: 20px"
           filterable
           placeholder="Please select a catalyst"
@@ -118,7 +128,6 @@ function handleClear() {
       </n-select>
       <n-select
           :disabled="!selectedValue1"
-          clearable
           style="margin-top: 20px"
           filterable
           placeholder="Please select a catalyst"
@@ -131,20 +140,15 @@ function handleClear() {
       </n-select>
     </n-card>
     <n-space justify="center">
-      <n-button @click="handleClear">
+      <n-button mt-2 @click="handleClear">
         Clear filter
       </n-button>
-      <n-button @click="handleSearch">
-        Search locations
-      </n-button>
+<!--      <n-button @click="handleSearch">-->
+<!--        Search locations-->
+<!--      </n-button>-->
     </n-space>
 
   </n-space>
 
 </template>
 
-<style scoped>
-.n-button {
-  margin-top: 20px
-}
-</style>

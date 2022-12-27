@@ -674,7 +674,7 @@ export const useHeroStore = defineStore({
             },
             {
                 "id": "96",
-                "name": "se-Karina",
+                "name": "ae-Karina",
                 "zodiac": "Aries",
                 "grade": "5",
                 "element": "ice"
@@ -888,81 +888,92 @@ export const useHeroStore = defineStore({
                 "zodiac": "Aries",
                 "grade": "5",
                 "element": "dark"
-            }
+            },
+            // {
+            //     "id": "127",
+            //     "name": "a-A",
+            //     "zodiac": "Test",
+            // }
         ],
 
         zodiac: [
+            // {
+            //     "name": "Test",
+            //     "primary": 10,
+            //     "secondary": 27,
+            //     "skillup": 41
+            // },
             {
                 "name": "Aquarius",
-                "primary": "6",
-                "secondary": "33",
-                "skillup": "31"
+                "primary": 6,
+                "secondary": 33,
+                "skillup": 31
             },
             {
                 "name": "Aries",
-                "primary": "10",
-                "secondary": "23",
-                "skillup": "34"
+                "primary": 10,
+                "secondary": 23,
+                "skillup": 34
             },
             {
                 "name": "Cancer",
-                "primary": "12",
-                "secondary": "40",
-                "skillup": "21"
+                "primary": 12,
+                "secondary": 40,
+                "skillup": 21
             },
             {
                 "name": "Capricorn",
-                "primary": "5",
-                "secondary": "26",
-                "skillup": "38"
+                "primary": 5,
+                "secondary": 26,
+                "skillup": 38
             },
             {
                 "name": "Gemini",
-                "primary": "7",
-                "secondary": "39",
-                "skillup": "35"
+                "primary": 7,
+                "secondary": 39,
+                "skillup": 35
             },
             {
                 "name": "Leo",
-                "primary": "3",
-                "secondary": "43",
-                "skillup": "42"
+                "primary": 3,
+                "secondary": 43,
+                "skillup": 42
             },
             {
                 "name": "Libra",
-                "primary": "11",
-                "secondary": "27",
-                "skillup": "32"
+                "primary": 11,
+                "secondary": 27,
+                "skillup": 32
             },
             {
                 "name": "Pisces",
-                "primary": "1",
-                "secondary": "24",
-                "skillup": "38"
+                "primary": 1,
+                "secondary": 24,
+                "skillup": 38
             },
             {
                 "name": "Sagittarius",
-                "primary": "9",
-                "secondary": "25",
-                "skillup": "20"
+                "primary": 9,
+                "secondary": 25,
+                "skillup": 20
             },
             {
                 "name": "Scorpio",
-                "primary": "2",
-                "secondary": "28",
-                "skillup": "36"
+                "primary": 2,
+                "secondary": 28,
+                "skillup": 36
             },
             {
                 "name": "Taurus",
-                "primary": "8",
-                "secondary": "22",
-                "skillup": "37"
+                "primary": 8,
+                "secondary": 22,
+                "skillup": 37
             },
             {
                 "name": "Virgo",
-                "primary": "4",
-                "secondary": "29",
-                "skillup": "30"
+                "primary": 4,
+                "secondary": 29,
+                "skillup": 30
             }
         ],
         grade: [
@@ -992,7 +1003,7 @@ export const useHeroStore = defineStore({
     }),
     getters: {
         getHeroList(state) {
-            return (state.hero).sort()
+            return (state.hero).sort((a, b) => a.name.localeCompare(b.name))
         },
         getZodiacList(state) {
             return (state.zodiac)

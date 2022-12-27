@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 import _ from 'lodash'
 import {useCatalystStore} from "./catalyst.js";
-import {toRaw} from "vue";
+
 
 
 export const useFilterStore = defineStore({
@@ -22,40 +22,74 @@ export const useFilterStore = defineStore({
     }),
 
     getters: {
-        getOptimal(state) {
-            if (!state.thirdLocation) {
-                let firstLocation = _.split(state.firstLocation, ',')
-                let secondLocation = _.split(state.secondLocation, ',')
-                let intersectOfTwo = _.intersectionWith(firstLocation, secondLocation, _.isEqual)
+        getIntersection123(state) {
+            let catalysts = [state.firstCatalyst, state.secondCatalyst, state.thirdCatalyst]
+            let locations = [state.firstLocation, state.secondLocation, state.thirdLocation]
 
-                if (_.isEmpty(intersectOfTwo) || intersectOfTwo == "") {
-                    return ('No optimal place to farm, farm separately')
-                } else {
-                    return _.toString(intersectOfTwo)
-                }
+            let intersection = _.intersection(locations[0], locations[1])
+            locations = _.intersection(intersection, locations[2])
+
+            const catalyst = useCatalystStore()
+            catalysts = [catalyst.getFirstCatalystName, catalyst.getSecondCatalystName, catalyst.getThirdCatalystName]
+
+            if (_.isEmpty(locations)) {
+                return null
             } else {
-                let firstLocation = _.split(state.firstLocation, ',')
-                let secondLocation = _.split(state.secondLocation, ',')
-                let thirdLocation = _.split(state.thirdLocation, ',')
-                let intersectOfTwo = _.intersection(firstLocation, secondLocation)
-                if (_.isEmpty(intersectOfTwo)) {
-                    intersectOfTwo = _.concat(firstLocation, secondLocation)
-                    let intersectOfThree = _.intersection(intersectOfTwo, thirdLocation)
-                    if (_.isEmpty(intersectOfThree)) {
-                        return ('No optimal place to farm, farm separately')
-                    } else {
-                        return _.toString(intersectOfThree)
-                    }
-                } else {
-                    let intersectOfThree = _.intersection(intersectOfTwo, thirdLocation)
-                    if (_.isEmpty(intersectOfThree)) {
-                        return ('No optimal place to farm, farm separately')
-                    } else {
-                        return _.toString(intersectOfThree)
-                    }
-                }
+                return {"catalysts": _.join(catalysts, ' + '), "locations": _.join(locations, ', ')}
             }
-        }
+        },
+        getIntersection12(state) {
+            let catalysts = [state.firstCatalyst, state.secondCatalyst]
+            let locations = [state.firstLocation, state.secondLocation]
+
+            const catalyst = useCatalystStore()
+            catalysts = [catalyst.getFirstCatalystName, catalyst.getSecondCatalystName]
+
+            locations = _.intersection(locations[0], locations[1])
+            if (_.isEmpty(locations)) {
+                return null
+            } else {
+                return {"catalysts": _.join(catalysts, ' + '), "locations": _.join(locations, ', ')}
+            }
+        },
+        getIntersection13(state) {
+            let catalysts = [state.firstCatalyst, state.thirdCatalyst]
+            let locations = [state.firstLocation, state.thirdLocation]
+
+            const catalyst = useCatalystStore()
+            catalysts = [catalyst.getFirstCatalystName, catalyst.getThirdCatalystName]
+
+            locations = _.intersection(locations[0], locations[1])
+            if (_.isEmpty(locations)) {
+                return null
+            } else {
+                return {"catalysts": _.join(catalysts, ' + '), "locations": _.join(locations, ', ')}
+            }
+        },
+        getIntersection23(state) {
+            let catalysts = [state.secondCatalyst, state.thirdCatalyst]
+            let locations = [state.secondLocation, state.thirdLocation]
+
+            const catalyst = useCatalystStore()
+            catalysts = [catalyst.getSecondCatalystName, catalyst.getThirdCatalystName]
+
+            locations = _.intersection(locations[0], locations[1])
+            if (_.isEmpty(locations)) {
+                return null
+            } else {
+                return {"catalysts": _.join(catalysts, ' + '), "locations": _.join(locations, ', ')}
+            }
+        },
+
+        getFirstLocation(state) {
+            return _.join(state.firstLocation, ', ')
+        },
+        getSecondLocation(state) {
+            return _.join(state.secondLocation, ', ')
+        },
+        getThirdLocation(state) {
+            return _.join(state.thirdLocation, ', ')
+        },
     },
 
     actions: {
@@ -65,20 +99,28 @@ export const useFilterStore = defineStore({
             this.secondLocation = null
             this.thirdLocation = null
             const catalysts = useCatalystStore()
+            const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'})
             let locations = catalysts.getCatalystLoc
             if (this.firstCatalyst) {
-                this.firstLocation = toRaw((_.find(locations, {"id": this.firstCatalyst})).loc)
+                this.firstLocation = (_.find(locations, {"id": this.firstCatalyst}).loc).sort((a, b) => {
+                    return collator.compare(a, b)
+                })
             }
             if (this.secondCatalyst) {
-                this.secondLocation = toRaw((_.find(locations, {"id": this.secondCatalyst})).loc)
+                this.secondLocation = (_.find(locations, {"id": this.secondCatalyst}).loc).sort((a, b) => {
+                    return collator.compare(a, b)
+                })
             }
             if (this.thirdCatalyst) {
-                this.thirdLocation = toRaw((_.find(locations, {"id": this.thirdCatalyst})).loc)
+                this.thirdLocation = (_.find(locations, {"id": this.thirdCatalyst}).loc).sort((a, b) => {
+                    return collator.compare(a, b)
+                })
             }
         },
 
 
     },
+
 
 
 })
