@@ -49,7 +49,7 @@ function setHeroFilter() {
   filterStore.secondLocation = null
   filterStore.thirdLocation = null
 
-  let zodiac = (_.find(heroes, {"id": this.selectedHero}).zodiac)
+  let zodiac = (_.find(heroes, {"id": selectedHero.value}).zodiac)
   filterStore.$patch({selectedZodiac: zodiac})
 
   filterStore.$patch({
@@ -151,4 +151,3 @@ function handleClear() {
   </n-space>
 
 </template>
-
