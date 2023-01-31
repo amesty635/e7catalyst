@@ -4,6 +4,7 @@ import Filter from './components/Filter.vue'
 import {NLayoutSider, NLayoutContent, NSpace, NLayout, NConfigProvider} from 'naive-ui'
 import { darkTheme } from 'naive-ui'
 
+
 </script>
 
 <template>
@@ -12,11 +13,10 @@ import { darkTheme } from 'naive-ui'
     <n-layout has-sider position="absolute">
       <n-layout-sider
           collapse-mode="width"
-          :collapsed-width="120"
+          :collapsed-width="40"
           :show-collapsed-content="false"
-          :width="480"
           show-trigger="bar"
-          content-style="padding: 24px;"
+          content-style="padding: 24px; max-width: 95vw"
           bordered
       >
         <Filter/>
