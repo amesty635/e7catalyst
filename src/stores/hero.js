@@ -889,11 +889,443 @@ export const useHeroStore = defineStore({
                 "grade": "5",
                 "element": "dark"
             },
-            // {
-            //     "id": "127",
-            //     "name": "a-A",
-            //     "zodiac": "Test",
-            // }
+            {
+                "id": 127,
+                "name": "Assassin Cidd",
+                "zodiac": "Aquarius",
+                "grade": 4,
+                "element": "dark"
+
+            },
+            {
+                "id": 128,
+                "name": "Serila",
+                "zodiac": "Aquarius",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 129,
+                "name": "Bad Cat Armin",
+                "zodiac": "Aries",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 130,
+                "name": "Champion Zerato",
+                "zodiac": "Aries",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 131,
+                "name": "Cidd",
+                "zodiac": "Aries",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 132,
+                "name": "Maya",
+                "zodiac": "Aries",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 133,
+                "name": "Zerato",
+                "zodiac": "Aries",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 134,
+                "name": "Angelica",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 135,
+                "name": "Cartuja",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 136,
+                "name": "Corvus",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 137,
+                "name": "Crozet",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 138,
+                "name": "General Purrgris",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 139,
+                "name": "Guider Aither",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 140,
+                "name": "Kizuna AI",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 141,
+                "name": "Shooting Star Achates",
+                "zodiac": "Cancer",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 142,
+                "name": "Armin",
+                "zodiac": "Capricorn",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 143,
+                "name": "Leo",
+                "zodiac": "Capricorn",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 144,
+                "name": "Wanderer Silk",
+                "zodiac": "Capricorn",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 145,
+                "name": "Achates",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 146,
+                "name": "Lots",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 147,
+                "name": "Roaming Warrior Leo",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 148,
+                "name": "Romann",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 149,
+                "name": "Shadow Rose",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 150,
+                "name": "Surin",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 151,
+                "name": "Tempest Surin",
+                "zodiac": "Gemini",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 152,
+                "name": "Clarissa",
+                "zodiac": "Leo",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 153,
+                "name": "Furious",
+                "zodiac": "Leo",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 154,
+                "name": "Karin",
+                "zodiac": "Leo",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 155,
+                "name": "Schuri",
+                "zodiac": "Leo",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 156,
+                "name": "Crimson Armin",
+                "zodiac": "Libra",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 157,
+                "name": "Fighter Maya",
+                "zodiac": "Libra",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 158,
+                "name": "Rose",
+                "zodiac": "Libra",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 158,
+                "name": "Rose",
+                "zodiac": "Libra",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 159,
+                "name": "Auxiliary Lots",
+                "zodiac": "Pisces",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 160,
+                "name": "Khawana",
+                "zodiac": "Pisces",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 161,
+                "name": "Troublemaker Crozet",
+                "zodiac": "Pisces",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 162,
+                "name": "Blaze Dingo",
+                "zodiac": "Sagittarius",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 163,
+                "name": "Assassin Caruja",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 164,
+                "name": "Blood Blade Karin",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 165,
+                "name": "Celestial Mercedes",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 166,
+                "name": "Challenger Dominiel",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 167,
+                "name": "Coli",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 168,
+                "name": "Inferno Khawazu",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 169,
+                "name": "Khawazu",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 170,
+                "name": "Mercedes",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 171,
+                "name": "Peacemaker Furious",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 172,
+                "name": "Purrgris",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 173,
+                "name": "Watcher Schuri",
+                "zodiac": "Scorpio",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 174,
+                "name": "Angel of Light Angelica",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 175,
+                "name": "Assassin Coli",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 176,
+                "name": "Benevolent Romann",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 177,
+                "name": "Crescent Moon Rin",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 178,
+                "name": "Dominiel",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "ice"
+            },
+            {
+                "id": 179,
+                "name": "Great Chief Khawana",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 180,
+                "name": "Moon Bunny Dominiel",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 181,
+                "name": "Sinful Angelica",
+                "zodiac": "Taurus",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 182,
+                "name": "Dingo",
+                "zodiac": "Virgo",
+                "grade": 4,
+                "element": "fire"
+            },
+            {
+                "id": 183,
+                "name": "Free Spirit Tieria",
+                "zodiac": "Virgo",
+                "grade": 4,
+                "element": "light"
+            },
+            {
+                "id": 184,
+                "name": "Kitty Clarissa",
+                "zodiac": "Virgo",
+                "grade": 4,
+                "element": "dark"
+            },
+            {
+                "id": 185,
+                "name": "Rin",
+                "zodiac": "Virgo",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 186,
+                "name": "Silk",
+                "zodiac": "Virgo",
+                "grade": 4,
+                "element": "earth"
+            },
+            {
+                "id": 187,
+                "name": "Beehoo",
+                "zodiac": "Capricorn",
+                "grade": 5,
+                "element": "fire"
+            },
+
+
         ],
 
         zodiac: [
