@@ -215,7 +215,7 @@ export const useCatalystStore = defineStore({
                 "id": 42,
                 "name": "Twisted Fang",
                 "isEpic": false,
-                "loc": []
+                "loc": ["UH-25"]
             },
             {
                 "id": 43,
