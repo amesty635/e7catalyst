@@ -138,15 +138,12 @@ function handleClear() {
           @update:value="setCatalystFilter2()"
       >
       </n-select>
-    </n-card>
-    <n-space justify="center">
-      <n-button mt-2 @click="handleClear">
+
+      <n-button justify="center"  mt-12 @click="handleClear">
         Clear filter
       </n-button>
-<!--      <n-button @click="handleSearch">-->
-<!--        Search locations-->
-<!--      </n-button>-->
-    </n-space>
+
+    </n-card>
 
   </n-space>
 

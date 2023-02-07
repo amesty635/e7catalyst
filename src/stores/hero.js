@@ -1324,6 +1324,13 @@ export const useHeroStore = defineStore({
                 "grade": 5,
                 "element": "fire"
             },
+            {
+                "id": 189,
+                "name": "Lone Crescent Bellona",
+                "zodiac": "Scorpio",
+                "grade": 5,
+                "element": "dark"
+            },
 
 
         ],
